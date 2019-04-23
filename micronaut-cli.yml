@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: finder.service
+---
+testFramework: junit
+sourceLanguage: java

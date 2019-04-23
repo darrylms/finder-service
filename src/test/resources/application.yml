@@ -1,0 +1,23 @@
+micronaut:
+    router:
+        static-resources:
+            swagger:
+                paths: classpath:META-INF/swagger
+                mapping: /swagger/**
+    application:
+        name: finder-service
+
+auth:
+    username: test
+    password: test
+connections:
+    retry: 3
+finder-transport-service:
+    app-id: test-id
+    app-key: test-key
+    optional:
+        public-journey-endpoint: http://localhost:8745/uk/public/journey/from/{from}/to/{to}.json
+google-maps-service:
+    api-key: test-key
+    optional:
+        place-endpoint: http://localhost:8745/maps/api/place/findplacefromtext/json
